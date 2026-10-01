@@ -50,4 +50,47 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Board Member Modal Logic
+    const toggleBtns = document.querySelectorAll('.bm-toggle-btn');
+    const modals = document.querySelectorAll('.vanev-modal');
+    
+    function closeModal() {
+        modals.forEach(modal => {
+            modal.classList.remove('active');
+        });
+        document.body.style.overflow = '';
+    }
+
+    toggleBtns.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('data-modal-target');
+            const targetModal = document.getElementById(targetId);
+            if (targetModal) {
+                targetModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    modals.forEach(modal => {
+        const closeBtn = modal.querySelector('.vanev-modal-close');
+        const backdrop = modal.querySelector('.vanev-modal-backdrop');
+        
+        if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+        }
+        
+        if (backdrop) {
+            backdrop.addEventListener('click', closeModal);
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
 });
