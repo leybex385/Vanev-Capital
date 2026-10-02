@@ -1215,6 +1215,26 @@ section {
     text-align: center;
 }
 
+.footer-legal-links {
+    margin-bottom: 10px;
+}
+
+.footer-legal-links a {
+    color: var(--gray);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s;
+}
+
+.footer-legal-links a:hover {
+    color: var(--accent);
+}
+
+.footer-legal-links .divider {
+    color: #333;
+    margin: 0 10px;
+}
+
 .footer-bottom p {
     color: #444;
     font-size: 0.85rem;
