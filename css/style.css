@@ -1327,7 +1327,7 @@ section {
     background: linear-gradient(145deg, #0a0a0a 0%, #151515 100%);
     border: 1px solid rgba(170, 145, 92, 0.1);
     border-radius: 2px;
-    padding: 0 40px 40px 40px;
+    padding: 0 30px 40px 30px;
     text-align: center;
     transition: all 0.4s ease;
     cursor: pointer;
@@ -1348,20 +1348,32 @@ section {
 }
 
 .bm-name {
-    font-size: 1.8rem;
+    font-size: clamp(1.3rem, 1.55vw, 1.65rem);
     color: #fff;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: 300;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.04em;
     font-family: var(--font-heading);
+    min-height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
 }
 
 .bm-title {
     color: var(--accent);
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     margin-bottom: 25px;
+    min-height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 1.45;
 }
 
 .bm-summary p {
