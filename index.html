@@ -27,7 +27,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=2">
+    <style>
+        .interactive-board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 100px;
+            align-items: stretch;
+        }
+        .board-member-card {
+            padding: 0 25px 40px 25px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .bm-brief {
+            display: grid;
+            grid-template-rows: 2.8rem 3.6rem 1fr auto;
+            flex: 1 1 auto;
+        }
+        .bm-name {
+            font-size: clamp(1.2rem, 1.45vw, 1.55rem);
+            white-space: nowrap;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+        }
+        .bm-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 0 0 20px 0;
+            line-height: 1.4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
     <!-- NAVIGATION -->
@@ -347,7 +390,7 @@
                         </div>
                         <div class="bm-brief">
                             <h4 class="bm-name">Robert C. Hastings</h4>
-                            <p class="bm-title">Corporate Growth &<br>Globalization Strategy Advisor</p>
+                            <p class="bm-title">Corporate Growth &<br>Global Strategy Advisor</p>
                             <div class="bm-summary">
                                 <p><strong>Expertise:</strong> Enterprise scale-up, global commercial expansion, executive talent architecture, and cross-border tech enterprise operations.</p>
                                 <p><strong>Value:</strong> Delivers an operational operator's perspective to assess executive leadership capability, scalable go-to-market execution, and global market expansion pathways.</p>

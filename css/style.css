@@ -1321,19 +1321,21 @@ section {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 100px;
+    align-items: stretch;
 }
 
 .board-member-card {
     background: linear-gradient(145deg, #0a0a0a 0%, #151515 100%);
     border: 1px solid rgba(170, 145, 92, 0.1);
     border-radius: 2px;
-    padding: 0 30px 40px 30px;
+    padding: 0 25px 40px 25px;
     text-align: center;
     transition: all 0.4s ease;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    height: 100%;
 }
 
 .board-member-card:hover {
@@ -1342,38 +1344,39 @@ section {
 }
 
 .bm-brief {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 2.8rem 3.6rem 1fr auto;
     flex: 1 1 auto;
 }
 
 .bm-name {
-    font-size: clamp(1.3rem, 1.55vw, 1.65rem);
+    font-size: clamp(1.2rem, 1.45vw, 1.55rem);
     color: #fff;
-    margin-bottom: 10px;
+    margin: 0;
     font-weight: 300;
     letter-spacing: 0.04em;
     font-family: var(--font-heading);
-    min-height: 2.4rem;
+    white-space: nowrap;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    white-space: nowrap;
+    height: 100%;
 }
 
 .bm-title {
     color: var(--accent);
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 25px;
-    min-height: 2.8rem;
+    letter-spacing: 0.08em;
+    margin: 0 0 20px 0;
+    line-height: 1.4;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    line-height: 1.45;
+    height: 100%;
 }
 
 .bm-summary p {
