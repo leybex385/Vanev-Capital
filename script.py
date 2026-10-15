@@ -38,6 +38,7 @@ jds = [
     ('Multi-Asset Research Associate', 'multiasset-associate'),
     ('Risk & Analytics Specialist', 'risk-analytics-specialist'),
     ('Operations Director', 'operations-director'),
+    ('Head of Information Technology (IT)', 'head-of-it'),
     ('Portfolio Operations Manager', 'portfolio-ops-manager'),
     ('Finance & Accounting Specialist', 'finance-accounting'),
     ('Compliance & Governance Specialist', 'compliance-governance'),

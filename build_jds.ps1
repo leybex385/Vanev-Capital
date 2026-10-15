@@ -179,6 +179,15 @@ $jds = @(
         pref = "<li>MBA or advanced degree in Operations Management.</li><li>Experience scaling operations from the ground up in a high-growth investment or startup environment.</li>"
     },
     @{
+        slug = "head-of-it"
+        category = "Portfolio Solutions & Firm Operations"
+        title = "Head of Information Technology (IT)"
+        overview = "We are seeking an experienced, security-focused Head of Information Technology to establish, lead, and manage the IT function of a newly established financial services company in the United States. Responsible for designing, implementing, and maintaining a secure, resilient, scalable, and cost-effective technology infrastructure that supports 24/7/365 operations."
+        resp = "<li>Develop and execute the company’s IT strategy, infrastructure roadmap, and technology architecture.</li><li>Establish the IT function, technology standards, operating procedures, and governance framework from inception.</li><li>Evaluate and manage cloud infrastructure (AWS/Azure/GCP), high availability, and 24/7/365 business continuity.</li><li>Own the implementation and ongoing management of the company’s IT security, zero-trust policies, and MFA/IAM architecture.</li><li>Establish centralized endpoint management (Microsoft Intune), device encryption, and employee IT security baselines.</li><li>Develop and test disaster recovery and business continuity plans against strict RTO and RPO targets.</li><li>Recruit, develop, and lead the IT organization and manage external cybersecurity/managed service partners.</li><li>Ensure technology compliance with U.S. financial services regulations, audit readiness, and NIST Cybersecurity Framework standards.</li>"
+        req = "<li>Minimum 5 years of professional IT experience within the financial services industry (banking, payments, investment management, fintech).</li><li>Demonstrated experience designing, implementing, or managing secure IT infrastructure and cloud platforms (AWS, Azure, GCP).</li><li>Strong understanding of cybersecurity principles, network security, IAM, endpoint protection, encryption, and vulnerability management.</li><li>Hands-on experience securing employee endpoints, email systems, and remote working environments.</li><li>Experience selecting technology vendors and managing external IT or cybersecurity service providers.</li><li>Demonstrated ability to recruit, build, and manage an IT team in a startup/high-growth environment.</li>"
+        pref = "<li>Experience building an IT department or infrastructure from the ground up for a financial services or fintech company.</li><li>Relevant certifications (CISSP, CISM, CCSP, AWS Certified Solutions Architect, Azure Security).</li><li>Familiarity with NIST Cybersecurity Framework, SOC 2 controls, and ISO 27001 standards.</li><li>Experience managing 24/7 IT operations or security monitoring services.</li>"
+    },
+    @{
         slug = "portfolio-ops-manager"
         category = "Portfolio Solutions & Firm Operations"
         title = "Portfolio Operations Manager"
@@ -226,6 +235,19 @@ $jds = @(
 )
 
 foreach ($jd in $jds) {
+    $dir = "jd\$($jd.slug)"
+    $path = "$dir\index.html"
+
+    # Preserve rich custom JD if it already exists
+    if ($jd.slug -eq "head-of-it" -and (Test-Path $path)) {
+        Write-Host "Preserved rich custom JD: $path"
+        continue
+    }
+
+    if (-not (Test-Path $dir)) {
+        New-Item -ItemType Directory -Path $dir -Force | Out-Null
+    }
+
     $content = $template -replace '\{Title\}', $jd.title `
                          -replace '\{Category\}', $jd.category `
                          -replace '\{Overview\}', $jd.overview `
@@ -233,7 +255,6 @@ foreach ($jd in $jds) {
                          -replace '\{Required\}', $jd.req `
                          -replace '\{Preferred\}', $jd.pref
     
-    $path = "jd\$($jd.slug)\index.html"
     Set-Content -Path $path -Value $content -Encoding UTF8
     Write-Host "Generated $path"
 }
