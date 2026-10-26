@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Vanev Capital | Careers</title>
-    <meta name="description" content="Explore open roles at Vanev Capital in venture investment, AI, and global capital markets.">
-    <link rel="icon" href="assets/favicon.jpg" type="image/jpeg">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="assets/logo.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -82,7 +83,10 @@
     <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-brand">VANEV CAPITAL</a>
+            <a href="index.html" class="nav-brand nav-logo">
+                <img src="assets/logo.jpg" alt="Vanev Capital" class="nav-logo-img">
+                <span class="nav-logo-text">Vanev Capital</span>
+            </a>
             <button class="hamburger" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
@@ -90,12 +94,18 @@
             </button>
             <ul class="nav-links">
                 <li><a href="index.html#about">About</a></li>
-                <li><a href="index.html#philosophy">Philosophy</a></li>
-                <li><a href="index.html#capabilities">Capabilities</a></li>
-                <li><a href="index.html#platforms">Platforms</a></li>
+                <li class="has-dropdown">
+                    <a href="index.html#segments">Business <span class="nav-arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html#segments">Four Core Segments</a></li>
+                        <li><a href="index.html#philosophy">Investment Philosophy</a></li>
+                        <li><a href="index.html#capabilities">Core Capabilities</a></li>
+                        <li><a href="index.html#platforms">Platforms</a></li>
+                    </ul>
+                </li>
                 <li><a href="index.html#leadership">Leadership</a></li>
                 <li><a href="careers.html">Careers</a></li>
-                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#contact" class="nav-btn">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -286,6 +296,7 @@
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#segments">Segments</a></li>
                         <li><a href="index.html#philosophy">Philosophy</a></li>
                         <li><a href="index.html#capabilities">Capabilities</a></li>
                         <li><a href="index.html#platforms">Platforms</a></li>

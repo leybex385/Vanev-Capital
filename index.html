@@ -7,7 +7,8 @@
     <meta name="description" content="Vanev Capital is an investment and strategic management firm focused on artificial intelligence, innovative capital, and long-term value creation.">
     
     <!-- Favicon -->
-    <link rel="icon" href="assets/favicon.jpg" type="image/jpeg">
+    <link rel="icon" href="assets/logo.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="assets/logo.jpg">
 
     <!-- Open Graph / Social Preview -->
     <meta property="og:type" content="website">
@@ -76,7 +77,10 @@
     <!-- NAVIGATION -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#hero" class="nav-brand">VANEV CAPITAL</a>
+            <a href="#hero" class="nav-brand nav-logo">
+                <img src="assets/logo.jpg" alt="Vanev Capital" class="nav-logo-img">
+                <span class="nav-logo-text">Vanev Capital</span>
+            </a>
             <button class="hamburger" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
@@ -84,12 +88,18 @@
             </button>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#philosophy">Philosophy</a></li>
-                <li><a href="#capabilities">Capabilities</a></li>
-                <li><a href="#platforms">Platforms</a></li>
+                <li class="has-dropdown">
+                    <a href="#segments">Business <span class="nav-arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#segments">Four Core Segments</a></li>
+                        <li><a href="#philosophy">Investment Philosophy</a></li>
+                        <li><a href="#capabilities">Core Capabilities</a></li>
+                        <li><a href="#platforms">Platforms</a></li>
+                    </ul>
+                </li>
                 <li><a href="#leadership">Leadership</a></li>
                 <li><a href="careers.html">Careers</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-btn">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -139,6 +149,60 @@
                         <p>The company is committed to connecting capital, technology, data, talent, and real-world industry needs through investment, research, and strategic resource integration, identifying and supporting companies and innovative projects with long-term development potential.</p>
                         <p>Our philosophy is not simply to seek short-term returns, but to focus on whether a company can truly establish sustainable competitive advantages.</p>
                         <p>For potential investments and strategic partnerships, Vanev Capital evaluates not only financial performance and market valuation, but also technology capabilities, business models, management teams, organizational efficiency, market opportunities, and long-term capital returns.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOUR CORE BUSINESS SEGMENTS -->
+        <section id="segments" class="segments-section reveal">
+            <div class="container">
+                <div class="segments-header">
+                    <div class="section-label">CORE BUSINESS</div>
+                    <h2>Four Core Business Segments</h2>
+                    <div class="accent-line"></div>
+                    <p class="lead-text">Representing Vanev Capital's core business philosophy and operational foundation across global markets and institutional finance.</p>
+                </div>
+
+                <div class="segments-matrix">
+                    <!-- Segment 1 -->
+                    <div class="matrix-cell">
+                        <div class="cell-header">
+                            <span class="cell-num">01</span>
+                            <span class="cell-tag">SEGMENT I</span>
+                        </div>
+                        <h3 class="cell-title">Global Multi-Asset Investment Management</h3>
+                        <p class="cell-desc">Equities, fixed income, foreign exchange (FX), commodities, alternative investments, and digital assets.</p>
+                    </div>
+
+                    <!-- Segment 2 -->
+                    <div class="matrix-cell">
+                        <div class="cell-header">
+                            <span class="cell-num">02</span>
+                            <span class="cell-tag">SEGMENT II</span>
+                        </div>
+                        <h3 class="cell-title">AI & Quantitative Finance</h3>
+                        <p class="cell-desc">AI is used solely to support decision-making. We reject black-box systems and retain human accountability for all final decisions.</p>
+                    </div>
+
+                    <!-- Segment 3 -->
+                    <div class="matrix-cell">
+                        <div class="cell-header">
+                            <span class="cell-num">03</span>
+                            <span class="cell-tag">SEGMENT III</span>
+                        </div>
+                        <h3 class="cell-title">Vanev Private Wealth</h3>
+                        <p class="cell-desc">Serving high-net-worth (HNW) and ultra-high-net-worth (UHNW) individuals and family offices.</p>
+                    </div>
+
+                    <!-- Segment 4 -->
+                    <div class="matrix-cell">
+                        <div class="cell-header">
+                            <span class="cell-num">04</span>
+                            <span class="cell-tag">SEGMENT IV</span>
+                        </div>
+                        <h3 class="cell-title">Digital Transformation for Institutional Finance</h3>
+                        <p class="cell-desc">Providing B2B AI, data governance, and process mining solutions to banks and asset management firms.</p>
                     </div>
                 </div>
             </div>
@@ -345,7 +409,7 @@
                 
                 <div class="founder-section">
                     <div class="founder-img-placeholder">
-                        <img src="elena1.jpg" alt="Elena Dubois">
+                        <img src="elena.jpg" alt="Elena Dubois">
                     </div>
                     <div class="founder-content">
                         <div class="founder-identity">
@@ -480,7 +544,7 @@
                     </div>
                     <div class="contact-item">
                         <span class="contact-label">EMAIL</span>
-                        <p class="contact-value">team@vanevam.com</p>
+                        <p class="contact-value">team@vanevcapital.com</p>
                     </div>
                     <div class="contact-item">
                         <span class="contact-label">PHONE</span>
@@ -512,6 +576,7 @@
                     <h4>Navigation</h4>
                     <ul>
                         <li><a href="#about">About</a></li>
+                        <li><a href="#segments">Segments</a></li>
                         <li><a href="#philosophy">Philosophy</a></li>
                         <li><a href="#capabilities">Capabilities</a></li>
                         <li><a href="#platforms">Platforms</a></li>
